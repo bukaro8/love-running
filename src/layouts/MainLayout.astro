@@ -7,6 +7,17 @@ const { title } = Astro.props;
 	<head>
 		<meta charset='UTF-8' />
 		<meta name='viewport' content='width=device-width' />
+		<!-- Meta tags for search engines -->
+		<meta
+			name='description'
+			content='Love Running, Club for runners in Dublin Ireland,Urban running, trail running. Dublin docklands and Phoenix Park'
+		/>
+		<!-- Keywords -->
+		<meta
+			name='keywords'
+			content='love running, run, running club, runners, Ireland, Dublin, sport, exercise'
+		/>
+		<!-- Favicons -->
 		<link
 			rel='apple-touch-icon'
 			sizes='180x180'
@@ -24,7 +35,7 @@ const { title } = Astro.props;
 			sizes='16x16'
 			href='/assets/favicon/favicon-16x16.png'
 		/>
-
+		<!-- Dynamic Title -->
 		<title>{title}</title>
 	</head>
 	<body>
