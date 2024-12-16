@@ -4,7 +4,7 @@ interface IconProps {
 	link: string;
 	class?: string;
 }
-//*add tailwind classes ej class: 'text-red-500'
+//*add tailwind classes ej. class:'text-red-500'
 export const iconsList: IconProps[] = [
 	{ name: 'facebook', link: 'https://facebook.com', class: '' },
 	{ name: 'twitter', link: 'https://twitter.com', class: '' },
