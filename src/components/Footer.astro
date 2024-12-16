@@ -3,14 +3,14 @@ import { Icon } from 'astro-icon/components';
 import { iconsList } from '../assets/constants';
 ---
 
-<footer class='w-screen flex-in-full absolute bottom-0 bg-white h-[7vh]'>
+<footer class='w-screen flex-in-full fixed bottom-0 bg-white min-h-fit h-[7vh]'>
 	<div
 		class='flex justify-around w-full flex-wrap text-5xl text-[clamp(1rem, 10vw, 3rem)] max-text-5xl sm:text-5xl'
 	>
 		{
 			iconsList.map((el) => (
 				<a
-					class={el.class}
+					class={`p-2 ${el.class} `}
 					href={el.link}
 					target='_blank'
 					rel='noopener'
