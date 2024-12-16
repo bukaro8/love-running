@@ -5,6 +5,7 @@ interface Props {
 import '../styles/globals.css';
 import '../styles/fonts.css';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 const { title } = Astro.props;
 ---
 
@@ -51,6 +52,7 @@ import '../styles/fonts.css'; -->
 		<!-- Main is taking the full body height -->
 		<main class='h-full font-Lato bg-slate-200 text-[#252525]'>
 			<slot />
+			<Footer />
 		</main>
 	</body>
 </html>

@@ -8,4 +8,10 @@
   .test-border{
     @apply border-2 border-red-600 shadow-2xl
   }
+  .flex-in-full{
+    @apply flex justify-between items-center
+  }
+  .flex-col-full{
+    @apply flex justify-between items-center
+  }
 }
