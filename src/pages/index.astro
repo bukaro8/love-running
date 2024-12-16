@@ -1,4 +1,5 @@
 ---
+import Header from '../components/Header.astro';
 import MainLayout from '../layouts/MainLayout.astro';
 import Layout from '../layouts/MainLayout.astro';
 
@@ -7,9 +8,10 @@ import Layout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout title='Home'>
-	<header>Header</header>
+	<Header />
+	<header class='test-border'>Header</header>
 
-	<main class='test-border'>Main content</main>
+	<main>Main content</main>
 
 	<footer>footer</footer>
 </MainLayout>
