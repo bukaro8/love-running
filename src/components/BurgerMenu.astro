@@ -8,13 +8,16 @@ const menuList = [
 ];
 ---
 
-<nav>
+<nav class='text-border relative'>
 	<div class='md:hidden text-right pe-2'>
 		<button id='toggleButton' '>
 			<Icon id='burger' name='burgerIcon' class=`text-5xl   ` />
 			<Icon id='close' name='closeIcon' class=`text-5xl hidden ` />
 		</button>
-		<ul id='dropdownMenu' class='w-screen hidden bg-pink-600/30 text-center'>
+		<ul
+			id='dropdownMenu'
+			class='absolute top-12 h-screen w-screen hidden right-0 bg-pink-300 text-center'
+		>
 			{
 				menuList.map((el) => (
 					<a href={el.link} class='nav-link font-Ubuntu tracking-[0.8rem]'>
@@ -26,7 +29,7 @@ const menuList = [
 			}
 		</ul>
 	</div>
-	<ul id='inlineMenu' class='hidden md:flex gap-5'>
+	<ul id='inlineMenu' class='hidden md:flex gap-5 pe-1'>
 		{
 			menuList.map((el) => (
 				<a href={el.link} class='nav-link'>
