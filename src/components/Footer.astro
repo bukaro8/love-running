@@ -1,20 +1,20 @@
 ---
 import { Icon } from 'astro-icon/components';
-const iconsList = [
-	{ name: 'facebook', link: 'facebook.com' },
-	{ name: 'twitter', link: 'twitter.com' },
-	{ name: 'youtube', link: 'youtube.com' },
-	{ name: 'instagram', link: 'instagram.com' },
-];
+import { iconsList } from '../assets/constants';
 ---
 
-<footer class='w-screen flex-in-full'>
+<footer class='w-screen flex-in-full absolute bottom-0 bg-white h-[7vh]'>
 	<div
 		class='flex justify-around w-full flex-wrap text-5xl text-[clamp(1rem, 10vw, 3rem)] max-text-5xl sm:text-5xl'
 	>
 		{
 			iconsList.map((el) => (
-				<a href={el.link}>
+				<a
+					href={el.link}
+					target='_blank'
+					rel='noopener'
+					aria-label={`Visit our ${el.name} page. (Opens in a new tab)`}
+				>
 					<Icon name={el.name} />
 				</a>
 			))

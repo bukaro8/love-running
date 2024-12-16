@@ -1,48 +1,114 @@
-# Astro Starter Kit: Basics
+### README for Astro Application
 
-```sh
-npm create astro@latest -- --template basics
+# **Astro Application**
+
+This project is an Astro-based application designed to be lightweight, fast, and extensible. The application includes a dynamic menu and footer, making it easy to add new links and social icons as needed.
+
+---
+
+## **Features**
+- 🚀 **Astro Framework**: Optimised for speed and developer experience.
+- 📂 **Dynamic Menu**: Easily customise navigation links.
+- 👣 **Customisable Footer**: Add or update social media icons effortlessly.
+- 🎨 **Modern Design**: Responsive and visually appealing UI.
+
+---
+
+## **Getting Started**
+
+### **Prerequisites**
+- Node.js (v16+ recommended)
+- npm or yarn installed
+
+### **Installation**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/astro-application.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd astro-application
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+### **Running the Application**
+Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+The application will be available at `http://localhost:4321/`.
+
+---
+
+## **Customisation**
+
+### **1. Adding Links to the Menu**
+To add more links to the navigation menu, update the `menuListItems` file:
+
+**File Location**:  
+`src/assets/constants/menuListItems.ts`
+
+**Example**:  
+To add a new "Gallery" link to the menu:
+```typescript
+{ title: 'Gallery', link: '/gallery' },
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### **2. Adding Icons to the Footer**
+To add more icons to the footer, update the `iconsListItems` file:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+**File Location**:  
+`src/assets/constants/iconsListItems.ts`
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+**Example**:  
+To add an Instagram icon to the footer:
+```typescript
+{ name: 'instagram', link: 'https://instagram.com' },
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## **Folder Structure**
+```plaintext
+src/
+├── components/    # Reusable components for UI
+├── layouts/       # Application layouts
+├── pages/         # Astro pages
+├── assets/        # Static files, constants, and images
+│   ├── constants/ # Menu and footer icon data
+└── styles/        # Global styles and CSS
+```
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## **Build for Production**
+To create an optimised production build, run:
+```bash
+npm run build
+# or
+yarn build
+```
+The static files will be generated in the `dist` folder.
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## **Contributing**
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
+
+---
+
+## **License**
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+Feel free to customise this README further as your project evolves! Let me know if you’d like additional sections.
