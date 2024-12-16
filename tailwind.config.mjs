@@ -5,6 +5,7 @@ export default {
 		fontFamily: {
 			Oswald: ['Oswald', 'Arial'],
 			Ubuntu: ['Ubuntu', 'sands-serif'],
+			Lato: ['Lato', 'sands-serif'],
 		},
 		extend: {},
 	},
