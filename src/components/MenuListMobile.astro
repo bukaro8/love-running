@@ -1,0 +1,50 @@
+---
+import { menuList } from '../assets/constants';
+---
+
+<!-- Mobile Menu -->
+<ul
+	id='dropdownMenu'
+	class='absolute top-13 w-screen hidden right-0 bg-white text-center'
+>
+	{
+		menuList.map((el) => (
+			<a href={el.link} class='nav-link font-Ubuntu tracking-[0.8rem]'>
+				<li class='capitalize text-3xl   font-light'>{el.title}</li>
+			</a>
+		))
+	}
+</ul>
+<style>
+	#dropdownMenu {
+		box-shadow: 0 2px 2px #3a3a3a;
+	}
+</style>
+<script>
+	//Burger Menu
+	document.querySelector('#toggleButton')?.addEventListener('click', () => {
+		const burger = document.querySelector('#burger');
+		const close = document.querySelector('#close');
+		//Menu dropdown
+		const dropdownMenu = document.querySelector('#dropdownMenu');
+		dropdownMenu?.classList.toggle('hidden');
+
+		burger?.classList.toggle('hidden');
+		close?.classList.toggle('hidden'); // Toggles back to default class
+	});
+
+	//Menu Underline when is on the page
+	document.addEventListener('DOMContentLoaded', () => {
+		const links = document.querySelectorAll('.nav-link');
+		const currentPath = window.location.pathname;
+		links.forEach((link) => {
+			if (link.getAttribute('href') === currentPath) {
+				link.classList.add(
+					'underline',
+					'md:decoration-black',
+					'decoration-back'
+				);
+			}
+		});
+	});
+</script>

@@ -1,0 +1,13 @@
+---
+import { menuList } from '../assets/constants';
+---
+
+<ul id='inlineMenu' class='hidden md:flex gap-5 pe-1'>
+	{
+		menuList.map((el) => (
+			<a href={el.link} class='nav-link hover:underline'>
+				<li class='capitalize text-3xl text-[#252525] '>{el.title}</li>
+			</a>
+		))
+	}
+</ul>

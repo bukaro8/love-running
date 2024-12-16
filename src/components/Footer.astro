@@ -1,14 +1,23 @@
 ---
 import { Icon } from 'astro-icon/components';
+const iconsList = [
+	{ name: 'facebook', link: 'facebook.com' },
+	{ name: 'twitter', link: 'twitter.com' },
+	{ name: 'youtube', link: 'youtube.com' },
+	{ name: 'instagram', link: 'instagram.com' },
+];
 ---
 
 <footer class='w-screen flex-in-full'>
 	<div
 		class='flex justify-around w-full flex-wrap text-5xl text-[clamp(1rem, 10vw, 3rem)] max-text-5xl sm:text-5xl'
 	>
-		<Icon name='facebook' />
-		<Icon name='twitter' />
-		<Icon name='youtube' />
-		<Icon name='instagram' />
+		{
+			iconsList.map((el) => (
+				<a href={el.link}>
+					<Icon name={el.name} />
+				</a>
+			))
+		}
 	</div>
 </footer>

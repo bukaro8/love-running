@@ -1,11 +1,5 @@
 ---
 import { Icon } from 'astro-icon/components';
-
-const menuList = [
-	{ title: 'home', link: '/' },
-	{ title: 'Gallery', link: '/gallery' },
-	{ title: 'Sign Up', link: '/sign' },
-];
 ---
 
 <nav class='relative'>
@@ -15,60 +9,6 @@ const menuList = [
 			<Icon id='burger' name='burgerIcon' class=`text-5xl   ` />
 			<Icon id='close' name='closeIcon' class=`text-5xl hidden ` />
 		</button>
-		<ul
-			id='dropdownMenu'
-			class='absolute top-13 w-screen hidden right-0 bg-white text-center'
-		>
-			{
-				menuList.map((el) => (
-					<a href={el.link} class='nav-link font-Ubuntu tracking-[0.8rem]'>
-						<li class='capitalize text-3xl   font-light'>{el.title}</li>
-					</a>
-				))
-			}
-		</ul>
+		<!-- <MenuListMobile /> -->
 	</div>
-	<!-- Tablet and desktop menu -->
-	<ul id='inlineMenu' class='hidden md:flex gap-5 pe-1'>
-		{
-			menuList.map((el) => (
-				<a href={el.link} class='nav-link hover:underline'>
-					<li class='capitalize text-3xl text-[#252525] '>{el.title}</li>
-				</a>
-			))
-		}
-	</ul>
 </nav>
-<style>
-	#dropdownMenu {
-		box-shadow: 0 2px 2px #3a3a3a;
-	}
-</style>
-<script>
-	//Burger Menu
-	document.querySelector('#toggleButton')?.addEventListener('click', () => {
-		const burger = document.querySelector('#burger');
-		const close = document.querySelector('#close');
-		//Menu dropdown
-		const dropdownMenu = document.querySelector('#dropdownMenu');
-		dropdownMenu?.classList.toggle('hidden');
-
-		burger?.classList.toggle('hidden');
-		close?.classList.toggle('hidden'); // Toggles back to default class
-	});
-
-	//Menu Underline when is on the page
-	document.addEventListener('DOMContentLoaded', () => {
-		const links = document.querySelectorAll('.nav-link');
-		const currentPath = window.location.pathname;
-		links.forEach((link) => {
-			if (link.getAttribute('href') === currentPath) {
-				link.classList.add(
-					'underline',
-					'md:decoration-black',
-					'decoration-back'
-				);
-			}
-		});
-	});
-</script>
