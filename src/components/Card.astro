@@ -7,27 +7,26 @@ export interface CardProps {
 	position?: string;
 }
 
-const { title, description, icon, right, position } = Astro.props as CardProps;
-let isRight = '';
-let boxRight = '';
-if (right) {
-	isRight = 'justify-end ';
-	boxRight = 'flex flex-col items-end';
+const { title, description, icon, position } = Astro.props as CardProps;
+let right;
+if (position) {
+	right = 'md:text-end';
 }
+
 import { Icon } from 'astro-icon/components';
 ---
 
-<article class=`pt-5 w-full flex flex-col items-end justify-center ${position}`>
-	<div class=`md:${right} md:${boxRight}`>
-		<!-- Title and Icon -->
-		<div class=`flex items-center  md:${isRight}`>
-			<h2 class='uppercase pe-2 font-bold'>{title}</h2>
-			<Icon name={`${icon}`} class='text-xl' />
-		</div>
-
-		<!-- Description -->
-		<div class=`border-t-[1px] border-black w-[80%] md:${right} `>
-			{description}
-		</div>
+<article class=`pt-5  flex flex-col md:w-[75%]  justify-center ${position} `>
+	<!-- Title and Icon -->
+	<div class='flex items-center'>
+		<h2 class='uppercase pe-2 font-bold'>
+			{title}
+		</h2>
+		<Icon name={`${icon}`} class='text-xl' />
 	</div>
+
+	<!-- Description -->
+	<p class=`border-t-2 ${right} `>
+		{description}
+	</p>
 </article>

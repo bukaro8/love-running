@@ -6,7 +6,45 @@ import Card from './Card.astro';
 	<h2 class='text-[280%] uppercase mb-5 text-center'>
 		Why Love Running With us?
 	</h2>
-	<div class='grid md:grid-cols-4 lg:grid-rows-3 lg:grid-cols-9'>
+	<div class='w-full lg:flex'>
+		<div id='healthyBenefits' class='lg:order-1 flex flex-col'>
+			<Card
+				title='feel healthy'
+				icon='heart'
+				description='Since it improves aerobic fitness, running is a great way to help improve your cardiovascular health. Plus, it burns calories and can build strength.'
+				position=''
+			/>
+			<Card
+				title='FEEL STRONG'
+				icon='dumbbell'
+				description='Running strengthens your heart by pumping blood more effectively through your body.'
+				position=''
+			/>
+		</div>
+
+		<div id='physicalBenefits' class='lg:order-3 flex flex-col items-end'>
+			<Card
+				title='FEEL Free'
+				icon='ballon'
+				description='Physical exercise, running included, is known to release endorphins in the brain. Endorphins make you more energetic, more awake and, yes, happier.'
+				position='md:items-end '
+			/>
+			<Card
+				title='GET SOCIAL'
+				icon='globe'
+				description='When we run with others, we can run farther and faster more easily. Social running can pull you out of a running funk or low mood, and inspire you to try new events.'
+				position='md:items-end'
+			/>
+		</div>
+		<div class='lg:order-2 mt-4 w-full h-[30vw] flex justify-center'>
+			<img
+				src='/assets/images/runner.webp'
+				alt='Runner'
+				class='rounded-full h-full'
+			/>
+		</div>
+	</div>
+	<!-- <div class='grid md:grid-cols-4 lg:grid-rows-3 lg:grid-cols-9'>
 		<Card
 			title='feel healthy'
 			icon='heart'
@@ -42,5 +80,5 @@ import Card from './Card.astro';
 				class='rounded-full h-full'
 			/>
 		</div>
-	</div>
+	</div> -->
 </section>
